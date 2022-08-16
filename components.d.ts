@@ -7,9 +7,19 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
-    Counter: typeof import('./src/components/Counter.vue')['default']
-    Footer: typeof import('./src/components/Footer.vue')['default']
+    CodeSnippet: typeof import('./src/components/CodeSnippet.vue')['default']
+    DropDown: typeof import('./src/components/DropDown.vue')['default']
+    DropDownFile: typeof import('./src/components/DropDownFile.vue')['default']
+    DropDownFolder: typeof import('./src/components/DropDownFolder.vue')['default']
+    FooterBar: typeof import('./src/components/FooterBar.vue')['default']
+    Game: typeof import('./src/components/Game.vue')['default']
+    GameBoard: typeof import('./src/components/GameBoard.vue')['default']
+    NavBar: typeof import('./src/components/NavBar.vue')['default']
+    ProjectCard: typeof import('./src/components/ProjectCard.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    Sheets: typeof import('./src/components/Sheets.vue')['default']
+    SheetsMobile: typeof import('./src/components/SheetsMobile.vue')['default']
+    TransitionDrop: typeof import('./src/components/transitions/TransitionDrop.vue')['default']
   }
 }

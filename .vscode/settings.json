@@ -1,5 +1,6 @@
 {
-  "prettier.enable": true,
+  "prettier.enable": false,
+  "eslint.format.enable": true,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
@@ -13,5 +14,6 @@
   "volar.icon.preview": false,
   "volar.icon.splitEditors": false,
   "volar.vueserver.useSecondServer": true,
-  "html.format.wrapAttributes": "force"
+  "html.format.wrapAttributes": "preserve",
+  "prettier.quoteProps": "preserve"
 }
