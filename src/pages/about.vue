@@ -5,7 +5,9 @@ const store = useGlobalState()
 </script>
 
 <template>
-  <div>
+  <div class="h-full">
+    <!-- mobile view -->
+
     <main class="lg:hidden py-4">
       <DropDown />
       <h1 class="text-secondary-1 p-4">
@@ -15,7 +17,10 @@ const store = useGlobalState()
         <SheetsMobile />
       </div>
     </main>
-    <main class="grid lg:grid-cols-12 text-[.875rem] 2xl:text-[1.125rem] lt-lg:hidden">
+
+    <!-- desktop view -->
+
+    <main class="grid lg:grid-cols-12 text-[.875rem] 2xl:text-[1.125rem] h-full lt-lg:hidden">
       <div class=" col-span-2 border-r grid grid-cols-[2.5rem_1fr]">
         <div class="border-r flex flex-col items-center pt-6 gap-4">
           <i class="i-ri-terminal-box-line" :class="[{ 'text-accent-1': store.openFolders.bio }]" /><i

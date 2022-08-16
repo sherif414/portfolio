@@ -3,24 +3,45 @@ const state = useGlobalState()
 </script>
 
 <template>
-  <div ref="el" class="game-board">
+  <div class="game-board">
+    <Game />
     <div class="pl-2">
       <div class="text-secondary-4 text-sm grid items-center p-2 bg-[rgba(1,20,35,0.19)] mb-4">
         <div class="mb-2">
           //use keyboard <br>
           //arrows to play
         </div>
+
+        <!-- arrow icons -->
+
         <div class="flex justify-center">
-          <i class="i ri:arrow-down-s-fill bg-[#010C15] rotate-180 transform py-[5px] px-4 rounded-lg" />
+          <svg width="51" height="30" viewBox="0 0 51 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="1.46094" y="1.46356" width="48.0787" height="27.6912" rx="7.5" fill="#010C15" stroke="#1E2D3D" />
+            <path d="M25.5 12.3091L29.75 18.3091H21.25L25.5 12.3091Z" fill="white" />
+          </svg>
         </div>
         <div class="flex items-center justify-center">
-          <i class="i ri:arrow-down-s-fill bg-[#010C15] rotate-90 transform py-4 px-2 rounded-lg" />
-          <i class="i ri:arrow-down-s-fill bg-[#010C15] mx-4 rotate-180 transform py-[5px] px-4 rounded-lg" />
-          <i class="i ri:arrow-down-s-fill bg-[#010C15] rotate-270 transform py-4 px-2 rounded-lg" />
+          <svg width="50" height="30" viewBox="0 0 50 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="49.0786" y="28.6547" width="48.0787" height="27.6912" rx="7.5" transform="rotate(-180 49.0786 28.6547)" fill="#010C15" stroke="#1E2D3D" />
+            <path d="M22.0391 14.8091L28.0391 10.5591L28.0391 19.0592L22.0391 14.8091Z" fill="white" />
+          </svg>
+
+          <svg width="51" height="30" viewBox="0 0 51 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="49.5391" y="28.6547" width="48.0787" height="27.6912" rx="7.5" transform="rotate(-180 49.5391 28.6547)" fill="#010C15" stroke="#1E2D3D" />
+            <path d="M25.5 17.8091L21.25 11.8091L29.75 11.8091L25.5 17.8091Z" fill="white" />
+          </svg>
+
+          <svg width="50" height="30" viewBox="0 0 50 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="49" y="28.6547" width="48.0787" height="27.6912" rx="7.5" transform="rotate(-180 49 28.6547)" fill="#010C15" stroke="#1E2D3D" />
+            <path d="M27.9604 14.8091L21.9604 19.0592L21.9604 10.5591L27.9604 14.8091Z" fill="white" />
+          </svg>
         </div>
       </div>
+
+      <!-- score section -->
+
       <div class="text-secondary-4">
-        //score : {{ state.score }}
+        //highest score : <span class="text-4">{{ state.score }}</span>
       </div>
     </div>
   </div>

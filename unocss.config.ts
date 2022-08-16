@@ -35,7 +35,7 @@ export default defineConfig({
   },
   shortcuts: {
     'nav-link': 'text-center h-full items-center grid hover:text-secondary-4',
-    'nav-link-active': 'text-secondary-4 border-b border-b-hovered border-b-2px',
+    'router-link-active': 'text-secondary-4 border-b border-b-hovered border-b-2px',
     'highlight': 'hover:text-secondary-4 cursor-pointer',
     'form-input': 'bg-primary-3 border w-full rounded-2 p-2 mt-1 outline-none focus:border-secondary-1',
   },
