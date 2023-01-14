@@ -6,7 +6,6 @@ const props = defineProps({
     type: String,
     required: true,
   },
-
 })
 const state = $(useGlobalState())
 const classes = $computed(() => ({ 'text-secondary-4': state.currSheet === props.title }))

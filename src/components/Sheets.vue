@@ -31,7 +31,7 @@ const store = useGlobalState()
       <br>
       * aside from coding I play lots of games specially real-time
       <br>
-      * strategy titles like age of empires and civilizatons.
+      * strategy titles like age of empires and civilizations.
       <br>
       * /
     </p>
@@ -80,7 +80,7 @@ const store = useGlobalState()
       <br>
       * but if I'm to be honest formal education wasn't really
       <br>
-      * my thing and I prefered self-learning through youtube,
+      * my thing and I preferred self-learning through youtube,
       <br>
       * books or the people I met through out my life.
       <br>
@@ -95,9 +95,9 @@ const store = useGlobalState()
       <br>
       * something new, channels like programming with mosh taught
       <br>
-      * me alot and i'm forever grateful to them
+      * me a lot and i'm forever grateful to them
       <br>
-      * another option is the offical docs of the tool i'm trying
+      * another option is the official docs of the tool i'm trying
       <br>
       * to learn which sometimes can be a life saver.
       <br>
@@ -120,7 +120,7 @@ const store = useGlobalState()
       <br>
       * but you don't need to know math to become a programmer -
       <br>
-      * its definatly the game i loved and hated the most & i
+      * its defiantly the game i loved and hated the most & i
       <br>
       * spent most of my free time playing it and when ever i
       <br>

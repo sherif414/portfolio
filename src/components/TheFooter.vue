@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <footer class="border-t border-lines flex items-center text-sm">
+  <footer class="border-t border-lines flex items-center text-sm lt-lg:hidden!">
     <div class="border-r border-lines p-2 h-full">
       find me at:
     </div>

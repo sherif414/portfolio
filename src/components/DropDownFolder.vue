@@ -16,8 +16,8 @@ const handleClick = () => {
 <template>
   <div>
     <div class="flex items-center highlight gap-2 mb-2" @click="handleClick">
-      <i :class="{ 'transform rotate-90': isOpen }" class="i-ri-arrow-right-s-line duration-300" />
-      <i class="i-ri-folder-fill" :class="[color]" /> {{ title }}
+      <i :class="{ 'rotate-90': isOpen }" class="i-ri-arrow-right-s-line duration-300" />
+      <i class="i-ri-folder-fill" :class="color" /> {{ title }}
     </div>
     <TransitionDrop>
       <div v-show="isOpen">

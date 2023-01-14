@@ -7,7 +7,7 @@ const dataBody = ref('')
 const showForm = ref(true)
 const resStatus = ref()
 
-const handleresend = () => {
+const handleResend = () => {
   showForm.value = true
 }
 
@@ -41,7 +41,7 @@ const submitForm = () => {
         <i class="lg:i-ri-arrow-down-s-fill mr-2 " />contacts
       </div>
       <div class="flex pl-2 items-center">
-        <i class="lg:i-ri-mail-fill mx-2" /> creazyhell@gmail.com
+        <i class="lg:i-ri-mail-fill mx-2" /> sherif.hassan.dev@gmail.com
       </div>
       <div class="flex pl-2 items-center">
         <i class="lg:i-ri-phone-fill mx-2" /> 0117446242
@@ -50,7 +50,7 @@ const submitForm = () => {
         <i class="lg:i-ri-phone-fill mx-2" /> 0994953238
       </div>
       <div class="p-1 text-secondary-4 flex lt-lg:bg-lines pl-4 border-b my-4 border-t">
-        <i class="lg:i-ri-arrow-down-s-fill mr-2 " />loaction
+        <i class="lg:i-ri-arrow-down-s-fill mr-2 " />location
       </div>
       <div class="flex pl-2 items-center">
         <i class="lg:i-ri-map-pin-user-fill mx-2" />khartoum - sudan
@@ -83,7 +83,7 @@ const submitForm = () => {
         </div>
         <div>thanks for reaching out</div>
         <div>I'll replay as soon as possible</div>
-        <button class="bg-secondary-3 text-secondary-4 rounded mt-4 px-2 py-1" @click="handleresend">
+        <button class="bg-secondary-3 text-secondary-4 rounded mt-4 px-2 py-1" @click="handleResend">
           send another?
         </button>
       </div>
@@ -92,7 +92,7 @@ const submitForm = () => {
       </div>
       <div v-if="!showForm && resStatus === 400" class="text-center">
         <div>hmm something is wrong with your form ..</div>
-        <button class="bg-secondary-3 text-secondary-4 rounded mt-4 px-2 py-1" @click="handleresend">
+        <button class="bg-secondary-3 text-secondary-4 rounded mt-4 px-2 py-1" @click="handleResend">
           try again?
         </button>
       </div>

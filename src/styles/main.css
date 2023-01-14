@@ -2,16 +2,6 @@
   border-color: rgba(30, 45, 61);
 }
 
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.2s;
-}
-
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
-}
-
 .game-board {
   background: linear-gradient(150.26deg, rgba(23, 85, 83, 0.7) 1.7%, rgba(67, 217, 173, 0.091) 81.82%);
   border: 1px solid #0c1616;
@@ -24,18 +14,6 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding: 1rem;
-}
-
-.menu {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  width: 100vw;
-  height: calc(100vh - 2.5rem);
-  bottom: 0;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  background-color: rgba(17, 25, 40, 0.31);
 }
 
 input:-webkit-autofill,
