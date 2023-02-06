@@ -58,6 +58,7 @@ const paint = (currTime: number) => {
       game.value.innerHTML = ''
     return
   }
+  //
   requestAnimationFrame(paint)
   const timeSinceLastRender = (currTime - lastRenderTime) / 1000
   if (timeSinceLastRender < 1 / GAME_SPEED)
@@ -106,17 +107,19 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <h3 v-if="isDead" class="py-4 w-46.6% text-center game-over text-6 left-1rem absolute bottom-24">
-    GAME OVER!
-  </h3>
+  <div class="relative grid">
+    <h3 v-if="isDead" class="py-4 w-full text-center game-over text-6 absolute bottom-24 z-10">
+      GAME OVER!
+    </h3>
   <button
-    v-if="!playing"
-    class="bg-lines absolute text-secondary-4 px-2 py-1 rounded-lg bottom-12 left-[20%]"
-    @click="runGame"
+  v-if="!playing"
+  class="bg-lines absolute w-max text-secondary-4 px-4 py-1 rounded-lg bottom-12 left-50% -translate-x-50%"
+  @click="runGame"
   >
-    start
-  </button>
-  <div id="game" ref="game" class="bg-[#011627] rounded-lg" />
+  start
+</button>
+  <div id="game" ref="game" class="bg-[#011627] rounded-lg"/>
+</div>
 </template>
 
 <style>

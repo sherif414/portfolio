@@ -15,16 +15,16 @@ async function navigateTo(route: string) {
     <div class="lg:col-span-2 border-r h-full items-center pl-4 grid">
       _Shareef-Hassan
     </div>
-    <router-link class="border-r nav-link" to="/">
+    <router-link active-class="b-b-accent-1 b-b-2 text-white" class="border-r nav-link" to="/">
       _index
     </router-link>
-    <router-link class="border-r nav-link" to="/about">
+    <router-link active-class="b-b-accent-1 b-b-2 text-white" class="border-r nav-link" to="/about">
       _about-me
     </router-link>
-    <router-link class="border-r nav-link" to="/projects">
+    <router-link active-class="b-b-accent-1 b-b-2 text-white" class="border-r nav-link" to="/projects">
       _projects
     </router-link>
-    <router-link class="border-r nav-link" to="/contact">
+    <router-link active-class="b-b-accent-1 b-b-2 text-white" class="border-r nav-link" to="/contact">
       _contact-me
     </router-link>
   </header>

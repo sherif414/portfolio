@@ -2,20 +2,6 @@
   border-color: rgba(30, 45, 61);
 }
 
-.game-board {
-  background: linear-gradient(150.26deg, rgba(23, 85, 83, 0.7) 1.7%, rgba(67, 217, 173, 0.091) 81.82%);
-  border: 1px solid #0c1616;
-  box-shadow: inset 0px 2px 0px rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(64px);
-  /* border-radius: 8px; */
-  z-index: 10;
-  width: 35vw;
-  height: 30vw;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding: 1rem;
-}
-
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
@@ -28,9 +14,4 @@ select:-webkit-autofill:focus {
   -webkit-text-fill-color: #607B96;
   -webkit-box-shadow: 0 0 0px 1000px #011221 inset;
   transition: background-color 5000s ease-in-out 0s;
-}
-
-.router-link-active {
-  color: white;
-  border-bottom: 2px solid #FEA55F;
 }

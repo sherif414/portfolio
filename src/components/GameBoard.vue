@@ -90,3 +90,19 @@ const state = useGlobalState()
     </svg>
   </div>
 </template>
+
+<style>
+.game-board {
+  background: linear-gradient(150.26deg, rgba(23, 85, 83, 0.7) 1.7%, rgba(67, 217, 173, 0.091) 81.82%);
+  border: 1px solid #0c1616;
+  box-shadow: inset 0px 2px 0px rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(64px);
+  /* border-radius: 8px; */
+  z-index: 10;
+  width: 35vw;
+  height: 30vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 1rem;
+}
+</style>
