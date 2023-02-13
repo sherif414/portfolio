@@ -11,33 +11,33 @@
     <aside class="border-r col-span-2 p-4">
       <ul class="flex flex-col gap-4">
         <li class="flex gap-2 items-center">
-          <input class="mr-2" type="radio" name="framework" id="radio-vue" value="vue">
-          <label for="radio-vue"><i class="i-ri-vuejs-line"/> vue</label>
+          <input id="radio-vue" class="mr-2" type="radio" name="framework" value="vue">
+          <label for="radio-vue"><i class="i-ri-vuejs-line" /> vue</label>
         </li>
         <li class="flex gap-2 items-center">
-          <input class="mr-2" type="radio" name="framework" id="radio-react" value="react">
-          <label for="radio-react"><i class="i-ri-reactjs-line"/> react</label>
+          <input id="radio-react" class="mr-2" type="radio" name="framework" value="react">
+          <label for="radio-react"><i class="i-ri-reactjs-line" /> react</label>
         </li>
         <li class="flex gap-2 items-center">
-          <input class="mr-2" type="radio" name="framework" id="radio-nuxt" value="nuxt">
-          <label for="radio-nuxt"><INuxt/> nuxt</label>
+          <input id="radio-nuxt" class="mr-2" type="radio" name="framework" value="nuxt">
+          <label for="radio-nuxt"><INuxt /> nuxt</label>
         </li>
         <li class="flex gap-2 items-center">
-          <input class="mr-2" type="radio" name="framework" id="radio-next" value="next">
-          <label for="radio-next"><INextjs/> next</label>
+          <input id="radio-next" class="mr-2" type="radio" name="framework" value="next">
+          <label for="radio-next"><INextjs /> next</label>
         </li>
         <li class="flex gap-2 items-center">
-          <input class="mr-2" type="radio" name="framework" id="radio-vanilla" value="vanilla">
-          <label for="radio-vanilla"><IJavascript/> vanilla js</label>
+          <input id="radio-vanilla" class="mr-2" type="radio" name="framework" value="vanilla">
+          <label for="radio-vanilla"><IJavascript /> vanilla js</label>
         </li>
         <li class="flex gap-2 items-center">
-          <input class="mr-2" type="radio" name="framework" id="radio-ionic" value="ionic">
-          <label for="radio-ionic"><IIonic/> ionic</label>
+          <input id="radio-ionic" class="mr-2" type="radio" name="framework" value="ionic">
+          <label for="radio-ionic"><IIonic /> ionic</label>
         </li>
       </ul>
     </aside>
     <section class="grid grid-cols-3 grid-rows-2 gap-6 justify-center col-span-10 p12">
-      <ProjectCard v-for="i in 6" :key="i"/>
+      <!-- <ProjectCard v-for="i in 6" :key="i" /> -->
     </section>
   </main>
 </template>

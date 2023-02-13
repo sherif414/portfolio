@@ -14,7 +14,6 @@ declare module '@vue/runtime-core' {
     Game: typeof import('./src/components/Game.vue')['default']
     GameBoard: typeof import('./src/components/GameBoard.vue')['default']
     IIonic: typeof import('./src/components/icons/IIonic.vue')['default']
-    Ijavascript: typeof import('./src/components/icons/IJavascript.vue')['default']
     IJavascript: typeof import('./src/components/icons/IJavascript.vue')['default']
     INextjs: typeof import('./src/components/icons/INextjs.vue')['default']
     INuxt: typeof import('./src/components/icons/INuxt.vue')['default']

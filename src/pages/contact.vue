@@ -5,30 +5,36 @@ const dataName = ref('')
 const dataEmail = ref('')
 const dataBody = ref('')
 const showForm = ref(true)
-const resStatus = ref()
+const submitSuccess = ref(false)
+const isSubmitting = ref(false)
 
 const handleResend = () => {
   showForm.value = true
 }
 
-const submitForm = () => {
-  const data = {
-    subject: dataName.value,
-    message: `${dataBody.value} email :${dataEmail.value}`,
+const handleSubmit = async () => {
+  const body = {
+    service_id: 'service_vku4618',
+    template_id: 'template_2vf8mca',
+    user_id: 'sD0cwBL60aBlLS6RA',
+    template_params: {
+      from_name: dataName.value,
+      message_body: `message: ${dataBody.value} email :${dataEmail.value}`,
+    },
   }
+
+  isSubmitting.value = true
   showForm.value = false
-  fetch('https://shareef-mail.herokuapp.com/api/mail', {
+  const res = await fetch('https://api.emailjs.com/api/v1.0/email/send-form', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify(data),
+    body: JSON.stringify(body),
   })
-    .then(response => (resStatus.value = response.status))
 
-    .catch((error) => {
-      resStatus.value = error.status
-    })
+  submitSuccess.value = res.ok
+  isSubmitting.value = false
 }
 </script>
 
@@ -59,8 +65,10 @@ const submitForm = () => {
 
     <!-- the form -->
 
-    <section class="flex flex-col items-center justify-center lt-lg:(p-8 mt-8) lg:(px-[15%] col-span-4 border-r)">
-      <form v-if="showForm" class="grid grid-cols-1 w-full gap-6">
+    <section
+      class="flex flex-col items-center justify-center lt-lg:(p-8 mt-8) lg:(px-[15%] col-span-4 border-r)"
+    >
+      <form v-if="showForm" class="grid grid-cols-1 w-full gap-6" @submit.prevent="handleSubmit">
         <div>
           <label class="font-bold" for="name">_name:</label>
           <input id="name" v-model="dataName" class="form-input" type="text">
@@ -73,37 +81,53 @@ const submitForm = () => {
           <label class="font-bold" for="message">_message:</label>
           <textarea id="message" v-model="dataBody" class="form-input" name="" rows="6" />
         </div>
-        <button class="bg-secondary-3 text-secondary-4 px-2 py-1 w-max rounded" @click.prevent="submitForm">
+        <button
+          class="bg-secondary-3 text-secondary-4 px-2 py-1 w-max rounded"
+        >
           submit-form
         </button>
       </form>
-      <div v-if="!showForm && resStatus === 200" class="text-center">
-        <div class="text-secondary-4">
-          all good !
+
+      <template v-else>
+        <div v-if="isSubmitting">
+          sending..
         </div>
-        <div>thanks for reaching out</div>
-        <div>I'll replay as soon as possible</div>
-        <button class="bg-secondary-3 text-secondary-4 rounded mt-4 px-2 py-1" @click="handleResend">
-          send another?
-        </button>
-      </div>
-      <div v-if="!showForm && resStatus !== 200">
-        sending..
-      </div>
-      <div v-if="!showForm && resStatus === 400" class="text-center">
-        <div>hmm something is wrong with your form ..</div>
-        <button class="bg-secondary-3 text-secondary-4 rounded mt-4 px-2 py-1" @click="handleResend">
-          try again?
-        </button>
-      </div>
+
+        <div v-if="!isSubmitting && submitSuccess" class="text-center">
+          <div class="text-secondary-4">
+            all good !
+          </div>
+          <div>thanks for reaching out</div>
+          <div>I'll replay as soon as possible</div>
+          <button
+            class="bg-secondary-3 text-secondary-4 rounded mt-4 px-2 py-1"
+            @click="handleResend"
+          >
+            send another?
+          </button>
+        </div>
+
+        <div v-if="!isSubmitting && !submitSuccess" class="text-center">
+          <div>hmm something went wrong, try contacting me directly using my email address ..</div>
+          <button
+            class="bg-secondary-3 text-secondary-4 rounded mt-4 px-2 py-1"
+            @click="handleResend"
+          >
+            try again?
+          </button>
+        </div>
+      </template>
     </section>
 
     <!-- code form -->
 
-    <section class="col-span-6 flex flex-col items-center justify-center text-[.825rem] 2xl:text-5 lt-lg:hidden">
+    <section
+      class="col-span-6 flex flex-col items-center justify-center text-[.825rem] 2xl:text-5 lt-lg:hidden"
+    >
       <div class="w-60ch text-secondary-3 break-words">
         1
-        <span class="mr-8" /> <span class="text-accent-4">const</span> button = document.querySelector(<span
+        <span class="mr-8" /> <span class="text-accent-4">const</span> button =
+        document.querySelector(<span
           class="text-accent-1"
         >'#submit-btn'</span>);
         <br>
@@ -129,7 +153,8 @@ const submitForm = () => {
         <span class="mr-8" />
         <br>
         9
-        <span class="mr-8" /> button.addEventListener(<span class="text-accent-1">'click'</span>, () <span class="text-accent-4">=></span> {
+        <span class="mr-8" /> button.addEventListener(<span class="text-accent-1">'click'</span>, ()
+        <span class="text-accent-4">=></span> {
         <br>
         10
         <span class="mr-8" /> form.submit(<span class="text-accent-4">message</span>)
